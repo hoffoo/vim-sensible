@@ -19,7 +19,7 @@ endif
 
 set autoindent
 set backspace=indent,eol,start
-set complete-=i
+"set complete-=i
 set showmatch
 set smarttab
 
@@ -60,7 +60,6 @@ if &listchars ==# 'eol:$'
 endif
 
 set autoread
-set fileformats+=mac
 
 if &history < 1000
   set history=1000
@@ -89,9 +88,9 @@ if exists('+undofile')
 endif
 
 " Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^linux'
-  set t_Co=16
-endif
+"if &t_Co == 8 && $TERM !~# '^linux'
+"  set t_Co=16
+"endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
