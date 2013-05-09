@@ -19,7 +19,6 @@ endif
 
 set autoindent
 set backspace=indent,eol,start
-"set complete-=i
 set showmatch
 set smarttab
 
@@ -28,12 +27,6 @@ set shiftround
 
 set ttimeout
 set ttimeoutlen=50
-
-set incsearch
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
 
 set laststatus=2
 set ruler
@@ -86,11 +79,6 @@ endif
 if exists('+undofile')
   set undofile
 endif
-
-" Allow color schemes to do bright colors without forcing bold.
-"if &t_Co == 8 && $TERM !~# '^linux'
-"  set t_Co=16
-"endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
